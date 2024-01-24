@@ -1,4 +1,4 @@
-import SubscriptionButton from '@/components/SubscriptionBUtton';
+import SubscriptionButton from '@/components/SubscriptionButton';
 import { checkSubscription } from '@/lib/subscription';
 import React from 'react';
 
