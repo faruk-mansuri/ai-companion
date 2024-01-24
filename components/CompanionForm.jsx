@@ -285,8 +285,8 @@ const CompanionForm = ({ initialData, categories }) => {
                     />
                   </FormControl>
                   <FormDescription>
-                    Describe in detail your companion's back story and relevant
-                    details.
+                    Describe in detail your companion&apos;s back story and
+                    relevant details.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
