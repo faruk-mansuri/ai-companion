@@ -3,10 +3,10 @@ generator client {
   previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
+// prisma/schema.prisma
 datasource db {
-  provider = "mysql"
-  url = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
 }
 
 model Category{
@@ -30,9 +30,6 @@ model Companion{
   category Category @relation(fields:[categoryId], references:[id])
 
   messages Message[]
-
-  @@index([categoryId])
-  @@fulltext([name])
 }
 
 enum Role{
@@ -51,8 +48,6 @@ model Message{
   userId String
 
   companion Companion @relation(fields: [companionId],references: [id], onDelete: Cascade)
-
-  @@index([companionId])
 }
 
 model UserSubscription{
